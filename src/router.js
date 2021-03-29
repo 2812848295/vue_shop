@@ -8,23 +8,21 @@ import Home from './components/Home.vue'
 import Welcome from './components/Welcome.vue'
 //导入用户列表主键
 import Users from './components/user/Users.vue'
+//导入权限区域列表组件
+import Rights from './components/power/Rights.vue'
+//导入角色列表组件
+import Roles from './components/power/Roles.vue'
+
+
 Vue.use(Router)
 
 const router =  new Router({
   routes: [
-    {
-      path: '/', 
-      redirect: '/login'
-    },
+    { path: '/', redirect: '/login'},
     //新增一个登录路由规则
-    {
-      path: '/login',
-      component: Login
-    },
+    { path: '/login', component: Login},
     //新增Home路由规则
-    {
-      path: '/home',
-      component: Home,
+    { path: '/home',component: Home,
       //重定向
       redirect:'/welcome',
       //增加一个子路由
@@ -37,6 +35,16 @@ const router =  new Router({
         {
           path: '/users',
           component:Users
+        },
+        //新增一个权限子路由
+        {
+          path: '/rights',
+          component: Rights
+        },
+        //新增一个角色子路由
+        {
+          path: '/roles',
+          component: Roles
         }
       ]
 
