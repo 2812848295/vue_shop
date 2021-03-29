@@ -6,17 +6,23 @@ import './plugins/element.js'
 import './assets/fonts/iconfont.css'
 //导入全局样式表
 import './assets/css/global.css'
-// //导入弹框提示组件
-// import {Message} from 'element-ui'
+
 
 //配置axios
 import axios from 'axios'
 //设置请求根路径
 axios.defaults.baseURL = 'http://127.0.0.1:8888/api/private/v1/'
+//设置拦截器
+axios.interceptors.request.use(config =>{
+  //为请求头对象 添加token验证的Authorization字段
+  config.headers.Authorization = window.sessionStorage.getItem('token');
+  //最后必须return config
+  return config;
+})
+
 //请求挂载到Vue的原型对象上
 Vue.prototype.$http = axios
-//弹框挂载Vue原型对象上
-// Vue.prototype.$message = Message
+
 
 Vue.config.productionTip = false
 
