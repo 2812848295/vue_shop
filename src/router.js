@@ -16,6 +16,10 @@ import Roles from './components/power/Roles.vue'
 import Cate from './components/goods/Cate.vue'
 // 导入商品分类参数组件
 import Params from './components/goods/Params.vue'
+// 导入商品列表组件
+import List from './components/goods/List.vue'
+// 导入添加商品组件
+import Add from './components/goods/Add.vue'
 Vue.use(Router)
 
 const router =  new Router({
@@ -57,6 +61,15 @@ const router =  new Router({
         {
           path:'/params',
           component:Params
+        },
+        //新增一个商品列表组件
+        {
+          path:'/goods',
+          component:List
+        },
+        {
+          path:'/goods/add',
+          component:Add
         }
       ]
 

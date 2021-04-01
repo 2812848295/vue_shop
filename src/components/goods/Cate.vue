@@ -83,6 +83,7 @@
           <el-input v-model="addCateForm.cat_name"></el-input>
         </el-form-item>
         <el-form-item label="父级分类">
+          <!-- 级联选择器 -->
           <!-- options指定数据源 -->
           <!-- props指定配置对象 -->
           <!-- :props="{ expandTrigger: 'hover' }" -->
