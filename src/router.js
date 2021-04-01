@@ -20,6 +20,9 @@ import Params from './components/goods/Params.vue'
 import List from './components/goods/List.vue'
 // 导入添加商品组件
 import Add from './components/goods/Add.vue'
+// 导入订单组件
+import Order from './components/order/Order.vue'
+
 Vue.use(Router)
 
 const router =  new Router({
@@ -70,6 +73,11 @@ const router =  new Router({
         {
           path:'/goods/add',
           component:Add
+        },
+        // 新增一个订单组件
+        {
+          path:'/orders',
+          component:Order
         }
       ]
 
