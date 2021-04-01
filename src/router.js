@@ -22,6 +22,8 @@ import List from './components/goods/List.vue'
 import Add from './components/goods/Add.vue'
 // 导入订单组件
 import Order from './components/order/Order.vue'
+// 导入报表组件
+import Reoprt from './components/reoprt/Reoprt.vue'
 
 Vue.use(Router)
 
@@ -78,6 +80,11 @@ const router =  new Router({
         {
           path:'/orders',
           component:Order
+        },
+        // 新增一个报表组件
+        {
+          path:'/reports',
+          component:Reoprt
         }
       ]
 
